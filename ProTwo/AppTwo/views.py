@@ -7,10 +7,10 @@ from AppTwo.models import User
 def index(request):
     return HttpResponse('<em>Hello World<em>')
 
-#
-# def help(request):
-#     my_dict = {'help_text': 'Pleaes read if you need help'}
-#     return render (request, 'AppTwo/index.html', context=my_dict)
+
+def help(request):
+    my_dict = {'help_text': 'Pleaes read if you need help'}
+    return render (request, 'AppTwo/index.html', context=my_dict)
 
 def user(request):
     user_list  = User.objects.order_by('first_name')

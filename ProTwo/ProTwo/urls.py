@@ -17,12 +17,16 @@ from django.conf.urls import url
 from django.contrib import admin
 from django.conf.urls import include
 from AppTwo import views
+from basicapp import views
+from login import views
 
 
 urlpatterns = [
     url(r'^admin/', admin.site.urls),
-    url(r'^$', views.index, name='index'),
+     #url(r'^$', views.index, name='index'),
     url(r'^apptwo/', include('AppTwo.urls')),
+    url(r'^basicapp/', include('basicapp.urls')),
+    url(r'^login/', include ('login.urls'))
 
 
 ]
